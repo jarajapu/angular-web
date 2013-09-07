@@ -1,0 +1,31 @@
+
+<table>
+            <tbody>
+            <tr>
+                <td ng-bind="project_one[0].name" style="text-align: center;">...</td>
+                <td ng-bind="project_two[0].name" style="text-align: center;">...</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">Neighbor Rank: #{{project_one[0].NeighborRank}}</td>
+                <td style="text-align: center;">Neighbor Rank: #{{project_two[0].NeighborRank}}</td>
+            </tr>
+            <tr>
+                <td><img alt="{{project_one[0].name}}" style="width: 90%;" src="{{project_one[0].Url}}" style="float:right"></td>
+                <td><img alt="{{project_two[0].name}}" style="width: 75%;" src="{{project_two[0].Url}}" style="float:right"></td>
+            </tr>
+            <tr>
+                <td>{{project_one[0].description}}</td>
+                <td>{{project_two[0].description}}</td>
+            </tr>
+            <tr>
+                <td>{{project_one[0].billnessDesc}}</td>
+                <td>{{project_two[0].billnessDesc}}</td>
+            </tr>
+            <tr>
+                <td>Modifier: {{project_one[0].ModVal}} - {{project_one[0].modDesc}}.</td>
+                <td>Modifier: {{project_two[0].ModVal}} - {{project_two[0].modDesc}}.</td>
+            </tr>
+            </tbody>
+</table>
+
+<div><a href="index.html#/list"> List all customers</a></div>
