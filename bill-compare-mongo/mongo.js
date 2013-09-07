@@ -3,8 +3,8 @@
      factory('Project', function($resource) {
            var Project = $resource('https://api.mongolab.com/api/1/databases/billness-values' +
                                    '/collections/billness/:id',
-                                   { apiKey: 'jtWlDanN_5cuh4KEUj3vqUxsO0fN4Pjt' },
-                                   { update: { method: 'PUT' } });
+                                   { apiKey: 'jtWlDanN_5cuh4KEUj3vqUxsO0fN4Pjt', l: '10', sk: '0'},
+                                   { update: { method: 'PUT' }, query: { method: 'GET', isArray: true}});
 
            Project.prototype.update = function(cb) {
                                   return Project.update({id: this._id.$oid},
