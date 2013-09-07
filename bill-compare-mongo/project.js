@@ -13,7 +13,7 @@ function ListCtrl($scope, Project) {
 
 function BillCtrl($scope, Project) {
       var min = 0;
-      var max = 3;
+      var max = 10;
 
       project_rand_one   = Math.floor(Math.random() * (max - min + 1)) + min;
       project_rand_two   = Math.floor(Math.random() * (max - min + 1)) + min;
