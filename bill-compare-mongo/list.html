@@ -1,0 +1,16 @@
+<!--script type="text/ng-template" id="list.html"-->
+    <table>
+       <thead>
+       <tr>
+        <th>Name</th>
+        <th>Description</th>
+       </tr>
+       </thead>
+       <tbody>
+         <tr ng-repeat="project in projects | orderBy:'name'">
+           <td>{{project.name}}</a></td>
+           <td>{{project.description}}</td>
+         </tr>
+      </tbody>
+    </table>
+<!--/script-->
