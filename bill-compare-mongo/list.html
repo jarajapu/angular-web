@@ -1,7 +1,8 @@
 <!--script type="text/ng-template" id="list.html"-->
 <!--h1> Hello {{projects}}</h1-->
 <h1> Hello admin !</h1>
-<table>
+[ <a href="#/new">New Profile</a> ]
+<table style="width: 70%; margin-left: auto; margin-right: auto;" >
        <thead>
        <tr>
            <th>Name </th>
@@ -10,9 +11,10 @@
        </thead>
        <tbody>
          <tr ng-repeat="project in projects | orderBy:'name'">
-           <td>{{project.name}}</a></td>
+             <td><a href="#/edit/{{project._id.$oid}}">{{project.name}}</a></td>
            <td>{{project.description}}</td>
          </tr>
       </tbody>
 </table>
+<div><a href="index.html"> Go Home</a></div>
 <!--/script-->

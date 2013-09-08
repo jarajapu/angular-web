@@ -1,0 +1,94 @@
+<style>
+    textarea,
+    input {
+      border: 5px solid white; 
+      -webkit-box-shadow: 
+        inset 0 0 4px  rgba(0,0,0,0.1),
+              0 0 6px rgba(0,0,0,0.1); 
+      -moz-box-shadow: 
+        inset 0 0 4px  rgba(0,0,0,0.1),
+              0 0 6px rgba(0,0,0,0.1); 
+      box-shadow: 
+        inset 0 0 4px  rgba(0,0,0,0.1),
+              0 0 6px rgba(0,0,0,0.1); 
+      padding: 5px;
+      background: rgba(255,255,255,0.5);
+      width: 100px;
+      display: inline;
+      float: left;
+      margin: 0 0 1px 0;
+  }
+  label {
+      display: inline;
+      float: left;
+      clear: left;
+      width: 50%;
+      text-align: right;
+      vertical-align: middle;
+      margin: 0 10px 0 0; 
+  }
+  form {
+      text-align: center;
+  }
+  a,
+  button {
+      margin: 0 0 2px 0;
+      padding: 4px;
+      background: #efefef;
+  }
+</style>
+
+<h1> Hello admin !</h1>
+<form name="myForm" style="height: 600px; margin-top: auto; margin-bottom: auto;" >
+  <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+    <label>Name</label>
+    <input type="text" name="name" ng-model="project.name" required>
+    <span ng-show="myForm.name.$error.required" class="help-inline">Required</span>
+  </div>
+                                                            
+  <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+    <label>Imgur url</label>
+    <input type="url" name="site" ng-model="project.Url" required>
+    <span ng-show="myForm.site.$error.required" class="help-inline"> Required</span>
+    <span ng-show="myForm.site.$error.url" class="help-inline"> Not a URL</span>
+  </div>
+                                                                                                                                    
+  <label>Description</label>
+  <textarea name="description" ng-model="project.description"></textarea>
+
+  <div class="control-group"> 
+  <label>Billness Value</label>
+  <input type="text" name="billnessValue" ng-model="project.billnessValue" required>
+  <span ng-show="myForm.billnessValue.$error.required" class="help-inline">Required</span>
+  </div>
+
+  <div class="control-group"> 
+  <label>Billness Description</label>
+  <input type="text" name="billnessDesc" ng-model="project.billnessDesc" required>
+  <span ng-show="myForm.billnessDesc.$error.required" class="help-inline">Required</span>
+  </div>
+
+  <div class="control-group"> 
+  <label>Mod Value</label>
+  <input type="text" name="ModVal" ng-model="project.ModVal" required>
+  <span ng-show="myForm.ModVal.$error.required" class="help-inline">Required</span>
+  </div>
+
+  <div class="control-group"> 
+  <label>Mod Description</label>
+  <input type="text" name="modDesc" ng-model="project.modDesc" required>
+  <span ng-show="myForm.modDesc.$error.required" class="help-inline">Required</span>
+  </div>
+
+  <div class="control-group"> 
+  <label>Neighbor Rank</label>
+  <input type="text" name="NeighborRank" ng-model="project.NeighborRank" required>
+  <span ng-show="myForm.NeighborRank.$error.required" class="help-inline">Required</span>
+  </div>
+
+  <div class="control-group">
+    <a href="#/list" class="btn">Cancel</a>
+    <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid" class="btn btn-primary">Save</button>
+    <button ng-click="destroy()" ng-show="project._id" class="btn btn-danger">Delete</button>
+  </div>
+</form>

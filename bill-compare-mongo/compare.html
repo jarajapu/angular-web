@@ -1,31 +1,38 @@
 
-<table>
+<table style="width: 100%; margin-left: auto; margin-right: auto; border: 1px solid gray; border-radius: 4px; " >
             <tbody>
             <tr>
-                <td ng-bind="project_one[0].name" style="text-align: center;">...</td>
-                <td ng-bind="project_two[0].name" style="text-align: center;">...</td>
+                <td ng-bind="project_one[0].name" style="text-align: center; font-weight: bold;">...</td>
+                <td ng-bind="project_two[0].name" style="text-align: center; font-weight: bold;">...</td>
+            </tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            <tr>
+            <tr> 
+                <td style="text-align: center; color:#FFF8DC;">Neighbor Rank: #{{project_one[0].NeighborRank}}</td>
+                <td style="text-align: center; color:#FFF8DC;">Neighbor Rank: #{{project_two[0].NeighborRank}}</td>
             </tr>
             <tr>
-                <td style="text-align: center;">Neighbor Rank: #{{project_one[0].NeighborRank}}</td>
-                <td style="text-align: center;">Neighbor Rank: #{{project_two[0].NeighborRank}}</td>
+                <td style="border: 1px solid gray; border-radius: 4px; "><img alt="{{project_one[0].name}}" style="width: 90%;" ng-src="{{project_one[0].Url}}" style="float:right"></td>
+                <td style="border: 1px solid gray; border-radius: 4px; "><img alt="{{project_two[0].name}}" style="width: 90%;" ng-src="{{project_two[0].Url}}" style="float:right"></td>
             </tr>
             <tr>
-                <td><img alt="{{project_one[0].name}}" style="width: 90%;" ng-src="{{project_one[0].Url}}" style="float:right"></td>
-                <td><img alt="{{project_two[0].name}}" style="width: 80%;" ng-src="{{project_two[0].Url}}" style="float:right"></td>
+                <td style="color:#556B2F;">{{project_one[0].description}}</td>
+                <td style="color:#556B2F;">{{project_two[0].description}}</td>
             </tr>
             <tr>
-                <td>{{project_one[0].description}}</td>
-                <td>{{project_two[0].description}}</td>
+                <td style="color:#B8860B">Billness: {{project_one[0].billnessDesc}}</td>
+                <td style="color:#B8860B">Billness: {{project_two[0].billnessDesc}}</td>
             </tr>
             <tr>
-                <td>{{project_one[0].billnessDesc}}</td>
-                <td>{{project_two[0].billnessDesc}}</td>
-            </tr>
-            <tr>
-                <td>Modifier: {{project_one[0].ModVal}} - {{project_one[0].modDesc}}.</td>
-                <td>Modifier: {{project_two[0].ModVal}} - {{project_two[0].modDesc}}.</td>
+                <td style="color:#D2691E">Modifier: {{project_one[0].ModVal}} - {{project_one[0].modDesc}}</td>
+                <td style="color:#D2691E">Modifier: {{project_two[0].ModVal}} - {{project_two[0].modDesc}}</td>
             </tr>
             </tbody>
 </table>
-
-<div><a href="index.html#/list"> List all customers</a></div>
+<div> 
+    <a href="#">
+        <img style="float: center; width: 40px; height: 40px;" src="http://wp.appadvice.com/wp-content/uploads/2010/08/118677-matte-grey-square-icon-arrows-arrow-circle-refresh.png">
+    </a>
+</div>
+<div><a href="index.html#/list"> List all profiles</a></div>
