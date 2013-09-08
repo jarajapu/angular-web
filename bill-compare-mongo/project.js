@@ -10,12 +10,12 @@ angular.module('project', ['mongolab']).
 
 
 function ListCtrl($scope, Project) {
-      $scope.projects = Project.query();
+      $scope.projects = Project.query({l: '0'});
 }
 
 function BillCtrl($scope, Project) {
       var min = 0;
-      var max = 10;
+      var max = 11;
 
       project_rand_one   = Math.floor(Math.random() * (max - min + 1)) + min;
       project_rand_two   = Math.floor(Math.random() * (max - min + 1)) + min;
